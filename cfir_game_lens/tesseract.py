@@ -91,13 +91,13 @@ class Tesseract:  # pylint: disable=too-few-public-methods
     @classmethod
     def _build_reducers(cls):
         return [
-            # (BitWiseReducer(GrayReducer(MedianBlurReducer())), 'first'),
-            # (BitWiseReducer(GrayReducer(MedianBlurReducer(blur_level=5))), 'second'),
-            # (BitWiseReducer(GrayReducer(MedianBlurReducer(blur_level=9))), 'third'),
-            # (GrayReducer(MedianBlurReducer(BitWiseReducer(), blur_level=3)), 'forth'),
-            # (GrayReducer(MedianBlurReducer(blur_level=3)), 'five'),
+            # (BitWiseReducer(reducer=GrayReducer(reducer=MedianBlurReducer())), 'first'),
+            # (BitWiseReducer(reducer=GrayReducer(reducer=MedianBlurReducer(blur_level=5))), 'second'),
+            # (BitWiseReducer(reducer=GrayReducer(reducer=MedianBlurReducer(blur_level=9))), 'third'),
+            # (GrayReducer(reducer=MedianBlurReducer(reducer=BitWiseReducer(), blur_level=3)), 'forth'),
+            # (GrayReducer(reducer=MedianBlurReducer(blur_level=3)), 'five'),
             (_BitWiseReducer(weight=0.3), "six"),
-            (_BitWiseReducer(_GaussianBlurReducer(), weight=0.3), "g"),
+            (_BitWiseReducer(reducer=_GaussianBlurReducer(), weight=0.3), "g"),
         ]
 
     def read_text(self, image: GameCoverImage, boxes: List[Box]):

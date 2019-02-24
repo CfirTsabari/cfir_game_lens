@@ -20,6 +20,8 @@ Usually is here: `C:\Program Files (x86)\Tesseract-OCR`
 
 **Dont forget** to install the `requirements.txt` file
 
+**Download** [frozen_east_text_detection.pb](https://github.com/UB-Mannheim/tesseract/wiki) and put it in the root directory
+
 Compatibility
 -------------
 Tested on python 3.7 on windows.
