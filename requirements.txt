@@ -1,0 +1,6 @@
+opencv-python
+imutils
+click
+numpy 
+pillow
+pytesseract
