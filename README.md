@@ -9,6 +9,7 @@ Usage
 `__main__.py folder-read [OPTIONS] FOLDER`
 
 or 
+
 `__main__.py image-read [OPTIONS] FILE`
 
 
